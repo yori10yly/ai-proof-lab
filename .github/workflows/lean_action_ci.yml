@@ -1,0 +1,22 @@
+name: Lean proof checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: GitHub-Upload
+          build: "true"
+      - name: Replay all proof attempts
+        working-directory: GitHub-Upload
+        run: python3 scripts/replay.py
