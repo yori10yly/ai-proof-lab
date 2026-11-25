@@ -1,0 +1,2 @@
+have h := Int.mul_self_nonneg (a - b)
+grind

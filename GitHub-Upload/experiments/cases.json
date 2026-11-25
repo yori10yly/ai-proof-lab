@@ -1,0 +1,82 @@
+[
+  {
+    "id": "01",
+    "title": "Divisibility is transitive",
+    "topic": "Number theory",
+    "question": "If a divides b and b divides c, then a divides c.",
+    "statement": "theorem problem01 (a b c : Nat)\n    (hab : a ∣ b) (hbc : b ∣ c) : a ∣ c := by",
+    "definitions": ""
+  },
+  {
+    "id": "02",
+    "title": "Divisibility of a sum",
+    "topic": "Number theory",
+    "question": "If d divides both a and b, then d divides their sum.",
+    "statement": "theorem problem02 (d a b : Nat) (ha : d ∣ a) (hb : d ∣ b) : d ∣ a + b := by",
+    "definitions": ""
+  },
+  {
+    "id": "03",
+    "title": "Constructing a divisibility witness",
+    "topic": "Number theory",
+    "question": "Any common divisor of a and b divides r times a plus s times b, for arbitrary natural coefficients r and s. Construct the witness from the two hypotheses.",
+    "statement": "theorem problem03 (d a b r s : Nat) (ha : d ∣ a) (hb : d ∣ b) :\n    d ∣ r * a + s * b := by",
+    "definitions": ""
+  },
+  {
+    "id": "04",
+    "title": "A product of consecutive numbers",
+    "topic": "Number theory",
+    "question": "For every natural number n, the product of n and n + 1 is divisible by two.",
+    "statement": "theorem problem04 (n : Nat) : 2 ∣ n * (n + 1) := by",
+    "definitions": ""
+  },
+  {
+    "id": "05",
+    "title": "The triangular sum",
+    "topic": "Induction",
+    "question": "Twice the sum from 1 through n equals n times n + 1, including the empty sum at n = 0.",
+    "statement": "theorem problem05 (n : Nat) : 2 * sumTo n = n * (n + 1) := by",
+    "definitions": "def sumTo : Nat → Nat\n  | 0 => 0\n  | n + 1 => sumTo n + (n + 1)"
+  },
+  {
+    "id": "06",
+    "title": "A finite geometric sum",
+    "topic": "Induction",
+    "question": "The sum of the first n powers of two, starting with 1, plus one equals two to the power n.",
+    "statement": "theorem problem06 (n : Nat) : powerSum n + 1 = 2 ^ n := by",
+    "definitions": "def powerSum : Nat → Nat\n  | 0 => 0\n  | n + 1 => powerSum n + 2 ^ n"
+  },
+  {
+    "id": "07",
+    "title": "Reversing a concatenation",
+    "topic": "Induction",
+    "question": "For lists over any element type, reversing xs appended to ys equals the reverse of ys appended to the reverse of xs. Use the supplied reverse function.",
+    "statement": "theorem problem07 {α : Type} (xs ys : List α) :\n    labReverse (xs ++ ys) = labReverse ys ++ labReverse xs := by",
+    "definitions": "def labReverse {α : Type} : List α → List α\n  | [] => []\n  | x :: xs => labReverse xs ++ [x]"
+  },
+  {
+    "id": "08",
+    "title": "Distance from a target",
+    "topic": "Inequalities",
+    "question": "If integer balances x and y each lie within e of the same target t, their difference x − y lies between −2e and 2e.",
+    "statement": "theorem problem08 (x y t e : Int) (hx₁ : t - e ≤ x) (hx₂ : x ≤ t + e)\n    (hy₁ : t - e ≤ y) (hy₂ : y ≤ t + e) :\n    -(2 * e) ≤ x - y ∧ x - y ≤ 2 * e := by",
+    "definitions": ""
+  },
+  {
+    "id": "09",
+    "title": "Bounds for a weighted sum",
+    "topic": "Inequalities",
+    "question": "Split w natural-number units between quantities a and b with a ≤ b. If k units receive a and the remaining units receive b, the total is between w times a and w times b.",
+    "statement": "theorem problem09 (a b k w : Nat) (hab : a ≤ b) (hk : k ≤ w) :\n    w * a ≤ k * a + (w - k) * b ∧ k * a + (w - k) * b ≤ w * b := by",
+    "definitions": ""
+  },
+  {
+    "id": "10",
+    "title": "A quadratic inequality",
+    "topic": "Inequalities",
+    "question": "For any two integers a and b, four times their product is at most the square of their sum.",
+    "statement": "theorem problem10 (a b : Int) : 4 * a * b ≤ (a + b) * (a + b) := by",
+    "definitions": ""
+  }
+]

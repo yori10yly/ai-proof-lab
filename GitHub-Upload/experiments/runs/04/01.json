@@ -1,0 +1,5 @@
+{
+  "exit_code": 1,
+  "stdout": "<stdin>:11:31: error: unsolved goals\nn k : Nat\nhk : n * (n + 1) = 2 * k\n⊢ 2 * k + (2 * n + 2 * 1) = 2 * (k + (n + 1))\n",
+  "stderr": ""
+}

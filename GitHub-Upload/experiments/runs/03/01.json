@@ -1,0 +1,5 @@
+{
+  "exit_code": 1,
+  "stdout": "<stdin>:6:21: error: This simp argument is unused:\n  Nat.mul_assoc\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Nat.mul_add, Nat.mul_left_comm, Nat.mul_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n<stdin>:6:55: error: This simp argument is unused:\n  Nat.mul_comm\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Nat.mul_add, Nat.mul_assoc, Nat.mul_left_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n",
+  "stderr": ""
+}

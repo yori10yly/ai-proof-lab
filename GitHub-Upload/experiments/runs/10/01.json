@@ -1,0 +1,5 @@
+{
+  "exit_code": 1,
+  "stdout": "<stdin>:2:12: error(lean.unknownIdentifier): Unknown constant `Int.mul_self_nonneg`\n<stdin>:1:65: error: unsolved goals\na b : Int\n⊢ 4 * a * b ≤ (a + b) * (a + b)\n",
+  "stderr": ""
+}

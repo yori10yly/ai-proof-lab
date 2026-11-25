@@ -1,0 +1,62 @@
+[
+  {
+    "problem": "01",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "problem": "02",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "problem": "03",
+    "exit_code": 0,
+    "stdout": "<stdin>:6:21: warning: This simp argument is unused:\n  Nat.mul_assoc\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Nat.mul_add, Nat.mul_left_comm, Nat.mul_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n<stdin>:6:55: warning: This simp argument is unused:\n  Nat.mul_comm\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Nat.mul_add, Nat.mul_assoc, Nat.mul_left_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n",
+    "stderr": ""
+  },
+  {
+    "problem": "04",
+    "exit_code": 1,
+    "stdout": "<stdin>:11:31: error: unsolved goals\nn k : Nat\nhk : n * (n + 1) = 2 * k\n⊢ 2 * k + (2 * n + 2 * 1) = 2 * (k + (n + 1))\n",
+    "stderr": ""
+  },
+  {
+    "problem": "05",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "problem": "06",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "problem": "07",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "problem": "08",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "problem": "09",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "problem": "10",
+    "exit_code": 1,
+    "stdout": "<stdin>:2:12: error(lean.unknownIdentifier): Unknown constant `Int.mul_self_nonneg`\n<stdin>:1:65: error: unsolved goals\na b : Int\n⊢ 4 * a * b ≤ (a + b) * (a + b)\n",
+    "stderr": ""
+  }
+]

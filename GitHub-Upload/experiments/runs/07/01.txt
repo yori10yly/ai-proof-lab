@@ -1,0 +1,3 @@
+induction xs with
+| nil => simp [labReverse]
+| cons x xs ih => simp [labReverse, ih, List.append_assoc]

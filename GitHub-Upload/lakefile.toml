@@ -1,0 +1,10 @@
+name = "ai-proof-lab"
+version = "1.0.0"
+defaultTargets = ["AiProofLab"]
+
+[leanOptions]
+warningAsError = true
+
+[[lean_lib]]
+name = "AiProofLab"
+roots = ["AiProofLab", "Problem01", "Problem02", "Problem03", "Problem04", "Problem05", "Problem06", "Problem07", "Problem08", "Problem09", "Problem10"]

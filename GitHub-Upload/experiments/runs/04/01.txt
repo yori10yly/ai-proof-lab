@@ -1,0 +1,10 @@
+induction n with
+| zero => exact ⟨0, rfl⟩
+| succ n ih =>
+  obtain ⟨k, hk⟩ := ih
+  refine ⟨k + (n + 1), ?_⟩
+  calc
+    (n + 1) * (n + 1 + 1) = n * (n + 1) + 2 * (n + 1) := by
+      rw [Nat.mul_comm (n + 1) (n + 1 + 1), Nat.add_mul, Nat.add_mul]
+      omega
+    _ = 2 * (k + (n + 1)) := by rw [hk, Nat.mul_add]
